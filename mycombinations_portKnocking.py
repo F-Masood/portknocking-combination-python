@@ -1,12 +1,16 @@
+'''
+I made this during pentesting djinn from Vulnhub
+29 June 2020 - 22:18 hrs PKT GMT +0500hrs
+'''
 from itertools import permutations
 import socket,time,sys
 
-items = '1356','6784','3409'
+items = '1356','6784','3409' # the port combinations you want to try out === change this as per your requirement
 
 datalist = permutations(items)
 
-remote_ip = '192.168.10.14'
-remote_port = 22
+remote_ip = '192.168.10.14' #remote IP address === change this as per your requirement
+remote_port = 22 #remote port that should be checked after trying the combinations === change this as per your requirement
 
 s = socket.socket()
 
@@ -29,7 +33,7 @@ for data in list(datalist):
 
     try:
         s.connect((remote_ip,remote_port))
-        print("I think its open now") 
+        print("I think the port is open now ^___^ ") 
         sys.exit()
 
     except Exception as e: 
