@@ -1,6 +1,9 @@
 '''
 I made this during pentesting djinn from Vulnhub
 29 June 2020 - 22:18 hrs PKT GMT +0500hrs
+
+Updated for Udacity Project
+11 April 2021 - 22:18 hrs PKT GMT +0500hrs
 '''
 from itertools import permutations
 import socket,time,sys
